@@ -29,7 +29,7 @@ const Activate = (props) => {
                 <Grid item xs={12} sm={6} md={4} elevation={6} square="true" className={classes.paper}>
                     {successful && (
                         <div>
-                            <Icon className={`${classes.icon} ${classes.success}`}>{"check_circle_outline"}</Icon>
+                            <Icon className={`${classes.icon} ${classes.success}`}>{"task_alt"}</Icon>
                             <Typography variant="h4">Email Verified</Typography>
                         </div>
                     )}

@@ -58,16 +58,28 @@ const RegisterStyle = makeStyles((theme) => ({
 
     },
     message: {
-        padding: "0",
         display: "block",
         "&,& *": {
             letterSpacing: "normal"
         },
+    },
+    close: {
+        width: "14px",
+        height: "14px"
+    },
+    iconButton: {
+        width: "24px",
+        height: "24px",
+        float: "right",
+        fontSize: "1.5rem",
+        fontWeight: "500",
+        lineHeight: "1",
         position: "relative",
+        padding: "0",
     },
     snackbar: {
         position: "relative",
-        padding: "20px 15px",
+        padding: "20px 20px",
         lineHeight: "20px",
         marginBottom: "20px",
         fontSize: "16px",

@@ -4,14 +4,27 @@ import { Link } from "react-router-dom";
 import { isEmail } from "validator";
 import useStyles from "../assets/components/RegisterStyle";
 
-import { TextField, FormControlLabel, Checkbox, Paper, Grid, Typography, Avatar, Button, Icon ,SnackbarContent } from "@material-ui/core";
-import Check from "@material-ui/icons/Check";
+import {
+    TextField,
+    FormControlLabel,
+    Checkbox,
+    Paper,
+    Grid,
+    Typography,
+    Avatar,
+    Button,
+    Icon,
+    SnackbarContent,
+    Collapse, IconButton
+} from "@material-ui/core";
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 
 import { register } from "../actions/auth";
+import CloseIcon from "@material-ui/icons/Close";
 
 const Register = () => {
     const [successful, setSuccessful] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const initialFValues = {
         firstName: '',
@@ -82,7 +95,7 @@ const Register = () => {
        e.preventDefault();
 
        setSuccessful(false);
-
+       setOpen(true);
        if (validate()) {
             dispatch(register(values.firstName, values.lastName, values.email, values.password, values.allowExtraEmails))
                 .then(() => {
@@ -186,21 +199,33 @@ const Register = () => {
                                 </Button>
                             </Grid>
                         </div>
-
                         {message && (
-                            <div>
-                                <SnackbarContent className={`${classes.snackbar} ${successful ? `${classes.success}` : `${classes.danger}`}`}
+                            <Collapse in={open}>
+                                <SnackbarContent
+                                    className={`${classes.snackbar} ${successful ? `${classes.success}` : `${classes.danger}`}`}
                                     message={
                                         <div className={classes.message}>
-                                            {successful ? <Check className={classes.icon}/> :
-                                                <Icon className={classes.icon}>{"info_outline"}</Icon>}
+                                            <Icon className={classes.icon}>{successful ? "task_alt" : "error_outline"}</Icon>
                                             <span>
-                                                <b>{successful ? "CONGRATULATIONS:" : "ERROR:"}</b> {message}
-                                            </span>
+                                            <b>{successful ? "CONGRATULATIONS:" : "ERROR:"}</b> {message}
+                                         </span>
                                         </div>
                                     }
+                                    action={
+                                        <IconButton
+                                            className={classes.iconButton}
+                                            key="close"
+                                            aria-label="Close"
+                                            color="inherit"
+                                            onClick={() => {
+                                                setOpen(false);
+                                            }}
+                                        >
+                                            <CloseIcon className={classes.close}/>
+                                        </IconButton>
+                                    }
                                 />
-                            </div>
+                            </Collapse>
                         )}
                         {!successful && (
                             <div>

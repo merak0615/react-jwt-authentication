@@ -2,10 +2,19 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { isEmail } from "validator";
 import useStyles from "../assets/components/ResetPasswordStyle";
-
-import { Avatar, Button, Grid, Icon, Paper, TextField, Typography, SnackbarContent } from "@material-ui/core";
+import CloseIcon from '@material-ui/icons/Close';
+import {
+    Avatar,
+    Button,
+    Grid,
+    Icon,
+    Paper,
+    TextField,
+    Typography,
+    SnackbarContent,
+    IconButton, Collapse
+} from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Check from "@material-ui/icons/Check";
 
 import { emailSending } from "../actions/email";
 
@@ -15,6 +24,7 @@ const ForgotPassword = () => {
         email: '',
     });
     const [successful, setSuccessful] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const { message } = useSelector(state => state.message);
 
@@ -51,11 +61,10 @@ const ForgotPassword = () => {
         validate({ [name]: value });
     };
 
-    const  resetPassword = (e) => {
+    const resetPassword = (e) => {
         e.preventDefault();
-
         setSuccessful(false);
-
+        setOpen(true);
         if (validate()) {
             dispatch(emailSending(values.email))
                 .then(() => {
@@ -66,7 +75,6 @@ const ForgotPassword = () => {
                 })
                 .catch(() => {
                     setSuccessful(false);
-
                 });
         }
     };
@@ -98,7 +106,6 @@ const ForgotPassword = () => {
                             {...(errors.email && {error:true,helperText:errors.email})}
 
                         />
-
                         <div className={classes.wrapper}>
                             <Button
                                 type="submit"
@@ -110,23 +117,34 @@ const ForgotPassword = () => {
                                 Send
                             </Button>
                         </div>
-
                         {message && (
-                            <div>
-                                <SnackbarContent className={`${classes.snackbar} ${successful ? `${classes.success}` : `${classes.danger}`}`}
-                                                 message={
-                                                     <div className={classes.message}>
-                                                         {successful ? <Check className={classes.icon}/> :
-                                                             <Icon className={classes.icon}>{"info_outline"}</Icon>}
-                                                         <span>
-                                                <b>{successful ? "CONGRATULATIONS:" : "ERROR:"}</b> {message}
-                                            </span>
-                                                     </div>
-                                                 }
+                            <Collapse in={open}>
+                                <SnackbarContent
+                                    className={`${classes.snackbar} ${successful ? `${classes.success}` : `${classes.danger}`}`}
+                                    message={
+                                        <div className={classes.message}>
+                                            <Icon className={classes.icon}>{successful ? "task_alt" : "error_outline"}</Icon>
+                                            <span>
+                                            <b>{successful ? "CONGRATULATIONS:" : "ERROR:"}</b> {message}
+                                         </span>
+                                        </div>
+                                    }
+                                    action={
+                                        <IconButton
+                                            className={classes.iconButton}
+                                            key="close"
+                                            aria-label="Close"
+                                            color="inherit"
+                                            onClick={() => {
+                                                setOpen(false);
+                                            }}
+                                        >
+                                            <CloseIcon className={classes.close}/>
+                                        </IconButton>
+                                    }
                                 />
-                            </div>
+                            </Collapse>
                         )}
-
                     </form>
                 </div>
             </Grid>

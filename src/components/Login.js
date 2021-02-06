@@ -3,10 +3,23 @@ import { useDispatch, useSelector } from "react-redux";
 import useStyles from "../assets/components/LoginStyle";
 import { Redirect, Link } from 'react-router-dom';
 
-import { TextField, Paper, CircularProgress, Grid, Typography, Avatar, Button, Icon, SnackbarContent } from "@material-ui/core";
+import {
+    TextField,
+    Paper,
+    CircularProgress,
+    Grid,
+    Typography,
+    Avatar,
+    Button,
+    Icon,
+    SnackbarContent,
+    Collapse,
+    IconButton
+} from "@material-ui/core";
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 import { login } from "../actions/auth";
+import CloseIcon from "@material-ui/icons/Close";
 
 const Login = (props) => {
 
@@ -16,6 +29,7 @@ const Login = (props) => {
         password: '',
     });
     const [loading, setLoading] = useState(false);
+    const [open, setOpen] = useState(true);
 
     const { isLoggedIn } = useSelector(state => state.auth);
     const { message } = useSelector(state => state.message);
@@ -55,6 +69,7 @@ const Login = (props) => {
         e.preventDefault();
 
         setLoading(true);
+        setOpen(true);
 
         if (validate()) {
             dispatch(login(values.email, values.password))
@@ -131,19 +146,32 @@ const Login = (props) => {
                         </div>
 
                         {message && (
-                            <div>
+                            <Collapse in={open}>
                                 <SnackbarContent
                                     message={
                                         <div className={classes.message}>
-                                            <Icon className={classes.icon}>{"info_outline"}</Icon>
+                                            <Icon className={classes.icon}>{"error_outline"}</Icon>
                                             <span>
                                                 <b>ERROR:</b> {message}
                                              </span>
                                         </div>
                                     }
                                     className={`${classes.snackbar} ${classes.danger}`}
+                                    action={
+                                        <IconButton
+                                            className={classes.iconButton}
+                                            key="close"
+                                            aria-label="Close"
+                                            color="inherit"
+                                            onClick={() => {
+                                                setOpen(false);
+                                            }}
+                                        >
+                                            <CloseIcon className={classes.close}/>
+                                        </IconButton>
+                                    }
                                 />
-                            </div>
+                            </Collapse>
                         )}
                         <Grid container>
                             <Grid item xs>
