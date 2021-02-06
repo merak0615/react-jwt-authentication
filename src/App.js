@@ -123,7 +123,6 @@ const App = () => {
                 )}
               </Toolbar>
             </AppBar>
-
             <div>
               <Switch>
                 <Route exact path={["/", "/home"]} component={Home} />
@@ -136,8 +135,6 @@ const App = () => {
                 <Route path="/activation/:token" component={Activate} />
                 <Route path="/reset" component={ForgotPassword} />
                 <Route path="/update/:token" component={UpdatePassword} />
-
-
               </Switch>
             </div>
           </div>

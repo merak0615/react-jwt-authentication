@@ -20,7 +20,7 @@ const AppStyle = makeStyles((theme) => ({
     outlineLink: {
         margin: theme.spacing(1, 1.5),
         "&:hover,&:focus": {
-            color: '#90caf9',
+            color: '#00acc1',
         },
     },
 }));
