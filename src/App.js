@@ -133,7 +133,7 @@ const App = () => {
                 <Route path="/mod" component={BoardModerator} />
                 <Route path="/admin" component={BoardAdmin} />
                 <Route path="/activation/:token" component={Activate} />
-                <Route path="/reset" component={ForgotPassword} />
+                <Route path="/forgot" component={ForgotPassword} />
                 <Route path="/update/:token" component={UpdatePassword} />
               </Switch>
             </div>

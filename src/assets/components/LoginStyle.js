@@ -51,17 +51,16 @@ const LoginStyle = makeStyles((theme) => ({
         marginTop: -12,
         marginLeft: -12,
     },
-    icon: {
-        display: "block",
-        float: "left",
-        marginRight: "1.071rem",
-
-    },
     message: {
+        padding: "0",
         display: "block",
+        maxWidth: "89%",
         "&,& *": {
             letterSpacing: "normal"
         },
+        position: "relative",
+        margin: "auto",
+        width: "100%"
     },
     close: {
         width: "14px",
@@ -74,12 +73,19 @@ const LoginStyle = makeStyles((theme) => ({
         fontSize: "1.5rem",
         fontWeight: "500",
         lineHeight: "1",
-        position: "relative",
-        padding: "0",
+        position: "absolute",
+        right: "-16px",
+        top: "0",
+        padding: "0"
+    },
+    icon: {
+        display: "block",
+        float: "left",
+        marginRight: "1.071rem"
     },
     snackbar: {
         position: "relative",
-        padding: "20px 20px",
+        padding: "20px 10px",
         lineHeight: "20px",
         marginBottom: "20px",
         fontSize: "16px",
@@ -93,7 +99,7 @@ const LoginStyle = makeStyles((theme) => ({
     },
     danger: {
         backgroundColor: "#f55a4e",
-        color: "#ffffff",
+        color: "#ffffff"
     },
 
 }));

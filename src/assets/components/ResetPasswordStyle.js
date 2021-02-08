@@ -3,47 +3,46 @@ import image from "../img/lake.jpg";
 
 const ResetPasswordStyle = makeStyles((theme) => ({
     root: {
-        height: '100vh',
+        height: '100vh'
     },
     image: {
         backgroundImage: 'url(' + image + ')',
         backgroundColor:
             theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center'
     },
     paper: {
         margin: theme.spacing(8, 4),
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     avatar: {
         margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: theme.palette.secondary.main
     },
     form: {
         width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(3),
+        marginTop: theme.spacing(3)
     },
     submit: {
         margin: theme.spacing(3, 0, 2),
-        color: "#ffffff",
+        color: "#ffffff"
     },
     wrapper: {
-        position: 'relative',
-    },
-    icon: {
-        display: "block",
-        float: "left",
-        marginRight: "1.071rem",
-
+        position: 'relative'
     },
     message: {
+        padding: "0",
         display: "block",
+        maxWidth: "89%",
         "&,& *": {
             letterSpacing: "normal"
         },
+        position: "relative",
+        margin: "auto",
+        width: "100%"
     },
     close: {
         width: "14px",
@@ -56,12 +55,19 @@ const ResetPasswordStyle = makeStyles((theme) => ({
         fontSize: "1.5rem",
         fontWeight: "500",
         lineHeight: "1",
-        position: "relative",
-        padding: "0",
+        position: "absolute",
+        right: "-16px",
+        top: "0",
+        padding: "0"
+    },
+    icon: {
+        display: "block",
+        float: "left",
+        marginRight: "1.071rem"
     },
     snackbar: {
         position: "relative",
-        padding: "20px 20px",
+        padding: "20px 10px",
         lineHeight: "20px",
         marginBottom: "20px",
         fontSize: "16px",
@@ -75,11 +81,11 @@ const ResetPasswordStyle = makeStyles((theme) => ({
     },
     success: {
         backgroundColor: "#5cb860",
-        color: "#ffffff",
+        color: "#ffffff"
     },
     danger: {
         backgroundColor: "#f55a4e",
-        color: "#ffffff",
+        color: "#ffffff"
     },
 
 }));

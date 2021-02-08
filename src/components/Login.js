@@ -148,34 +148,34 @@ const Login = (props) => {
                         {message && (
                             <Collapse in={open}>
                                 <SnackbarContent
+                                    //className={`${classes.snackbar} ${classes.danger}`}
                                     message={
-                                        <div className={classes.message}>
+                                        <div>
                                             <Icon className={classes.icon}>{"error_outline"}</Icon>
                                             <span>
                                                 <b>ERROR:</b> {message}
-                                             </span>
+                                            </span>
+                                            <IconButton
+                                                className={classes.iconButton}
+                                                key="close"
+                                                aria-label="Close"
+                                                color="inherit"
+                                                onClick={() => {setOpen(false);}}
+                                            >
+                                                <CloseIcon className={classes.close}/>
+                                            </IconButton>
                                         </div>
                                     }
-                                    className={`${classes.snackbar} ${classes.danger}`}
-                                    action={
-                                        <IconButton
-                                            className={classes.iconButton}
-                                            key="close"
-                                            aria-label="Close"
-                                            color="inherit"
-                                            onClick={() => {
-                                                setOpen(false);
-                                            }}
-                                        >
-                                            <CloseIcon className={classes.close}/>
-                                        </IconButton>
-                                    }
+                                    classes={{
+                                        root: classes.snackbar + " " + classes.danger,
+                                        message: classes.message
+                                    }}
                                 />
                             </Collapse>
                         )}
                         <Grid container>
                             <Grid item xs>
-                                <Link to={"/reset"} variant="body2" className={classes.link}>
+                                <Link to={"/forgot"} variant="body2" className={classes.link}>
                                     Forgot password?
                                 </Link>
                             </Grid>

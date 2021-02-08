@@ -16,7 +16,7 @@ import {
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
-import { emailSending } from "../actions/email";
+import { sendEmail } from "../actions/email";
 
 const ForgotPassword = () => {
     const [errors, setErrors] = useState({});
@@ -66,7 +66,7 @@ const ForgotPassword = () => {
         setSuccessful(false);
         setOpen(true);
         if (validate()) {
-            dispatch(emailSending(values.email))
+            dispatch(sendEmail(values.email))
                 .then(() => {
                     setSuccessful(true);
                     setValues({
@@ -120,28 +120,28 @@ const ForgotPassword = () => {
                         {message && (
                             <Collapse in={open}>
                                 <SnackbarContent
-                                    className={`${classes.snackbar} ${successful ? `${classes.success}` : `${classes.danger}`}`}
+                                    //className={`${classes.snackbar} ${successful ? `${classes.success}` : `${classes.danger}`}`}
                                     message={
-                                        <div className={classes.message}>
+                                        <div>
                                             <Icon className={classes.icon}>{successful ? "task_alt" : "error_outline"}</Icon>
                                             <span>
-                                            <b>{successful ? "CONGRATULATIONS:" : "ERROR:"}</b> {message}
-                                         </span>
+                                                <b>{successful ? "CONGRATULATIONS:" : "ERROR:"}</b> {message}
+                                            </span>
+                                            <IconButton
+                                                className={classes.iconButton}
+                                                key="close"
+                                                aria-label="Close"
+                                                color="inherit"
+                                                onClick={() => {setOpen(false);}}
+                                            >
+                                                <CloseIcon className={classes.close} />
+                                            </IconButton>
                                         </div>
                                     }
-                                    action={
-                                        <IconButton
-                                            className={classes.iconButton}
-                                            key="close"
-                                            aria-label="Close"
-                                            color="inherit"
-                                            onClick={() => {
-                                                setOpen(false);
-                                            }}
-                                        >
-                                            <CloseIcon className={classes.close}/>
-                                        </IconButton>
-                                    }
+                                    classes={{
+                                        root: classes.snackbar + " " + (successful ? classes.success : classes.danger),
+                                        message: classes.message
+                                    }}
                                 />
                             </Collapse>
                         )}

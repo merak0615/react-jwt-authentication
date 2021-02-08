@@ -5,7 +5,17 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/components/AppStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/AppStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/email.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/email.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/components/LoginStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/LoginStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/components/RegisterStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/RegisterStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/components/ResetPasswordStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/ResetPasswordStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ForgotPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForgotPassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UpdatePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UpdatePassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/email.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/email.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +106,7 @@
       <workItem from="1609586090391" duration="27032000" />
       <workItem from="1611144950052" duration="27216000" />
       <workItem from="1612273451070" duration="12632000" />
-      <workItem from="1612535185944" duration="16606000" />
+      <workItem from="1612535185944" duration="28304000" />
     </task>
     <task id="LOCAL-00001" summary="Init Commit">
       <created>1612553813004</created>
@@ -112,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612635550773</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change Button Color">
+      <created>1612639054593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612639054593</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +163,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Init Commit" />
     <MESSAGE value="Modify SnackbarContent" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify SnackbarContent" />
+    <MESSAGE value="Change Button Color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Button Color" />
   </component>
 </project>

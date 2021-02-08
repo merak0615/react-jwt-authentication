@@ -30,8 +30,15 @@ const logout = () => {
     localStorage.removeItem("user");
 };
 
+const updatePassword = (token, password) => {
+    return axios.patch(API_URL + `updatepassword/${token}`, {
+        password,
+    });
+};
+
 export default {
     register,
     login,
     logout,
+    updatePassword,
 };

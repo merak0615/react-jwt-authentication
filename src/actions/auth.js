@@ -84,3 +84,32 @@ export const logout = () => (dispatch) => {
         type: LOGOUT,
     });
 };
+
+export const updatePassword = (token, password) => (dispatch) => {
+    return AuthService.updatePassword(token, password).then(
+        (response) => {
+            dispatch({
+                type: SET_MESSAGE,
+                payload: response.data.message,
+            });
+
+            return Promise.resolve();
+        },
+
+        (error) => {
+            const message =
+                (error.response &&
+                    error.response.data &&
+                    error.response.data.message) ||
+                error.message ||
+                error.toString();
+
+            dispatch({
+                type: SET_MESSAGE,
+                payload: message,
+            });
+
+            return Promise.reject();
+        }
+    );
+};

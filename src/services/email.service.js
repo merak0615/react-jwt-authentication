@@ -10,7 +10,7 @@ const activation = (token) => {
     });
 };
 
-const emailSending = (email) => {
+const sendEmail = (email) => {
     return axios.get(API_URL + "sendtoken", {
         params: {
             email,
@@ -18,16 +18,7 @@ const emailSending = (email) => {
     });
 };
 
-const passwordReset = (token, password) => {
-    return axios.post(API_URL + "passwordreset", {
-        token,
-        password,
-    });
-};
-
-
 export default {
     activation,
-    emailSending,
-    passwordReset,
+    sendEmail,
 };
