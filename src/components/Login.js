@@ -20,6 +20,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 import { login } from "../actions/auth";
 import CloseIcon from "@material-ui/icons/Close";
+import {clearMessage} from "../actions/message";
 
 const Login = (props) => {
 
@@ -160,7 +161,8 @@ const Login = (props) => {
                                                 key="close"
                                                 aria-label="Close"
                                                 color="inherit"
-                                                onClick={() => {setOpen(false);}}
+                                                onClick={() => {setOpen(false);
+                                                                dispatch(clearMessage());}}
                                             >
                                                 <CloseIcon className={classes.close}/>
                                             </IconButton>

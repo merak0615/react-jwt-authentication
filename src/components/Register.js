@@ -21,6 +21,7 @@ import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 
 import { register } from "../actions/auth";
 import CloseIcon from "@material-ui/icons/Close";
+import {clearMessage} from "../actions/message";
 
 const Register = () => {
     const [successful, setSuccessful] = useState(false);
@@ -214,7 +215,8 @@ const Register = () => {
                                                 key="close"
                                                 aria-label="Close"
                                                 color="inherit"
-                                                onClick={() => {setOpen(false);}}
+                                                onClick={() => {setOpen(false);
+                                                                 dispatch(clearMessage());}}
                                             >
                                                 <CloseIcon className={classes.close} />
                                             </IconButton>

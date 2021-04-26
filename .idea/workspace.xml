@@ -4,18 +4,10 @@
     <list default="true" id="5c41d8dd-a731-471b-8606-f3e8ba19edc9" name="Default Changelist" comment="Modify SnackbarContent">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/email.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/email.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/components/LoginStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/LoginStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/components/RegisterStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/RegisterStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/components/ResetPasswordStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/ResetPasswordStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ForgotPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForgotPassword.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UpdatePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UpdatePassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/email.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/email.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,17 +55,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -106,7 +87,9 @@
       <workItem from="1609586090391" duration="27032000" />
       <workItem from="1611144950052" duration="27216000" />
       <workItem from="1612273451070" duration="12632000" />
-      <workItem from="1612535185944" duration="28304000" />
+      <workItem from="1612535185944" duration="40451000" />
+      <workItem from="1613919095711" duration="2179000" />
+      <workItem from="1617646009609" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Init Commit">
       <created>1612553813004</created>
@@ -129,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612639054593</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modify SnackbarContent">
+      <created>1612763706326</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612763706326</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,13 +147,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Init Commit" />
-    <MESSAGE value="Modify SnackbarContent" />
     <MESSAGE value="Change Button Color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change Button Color" />
+    <MESSAGE value="Modify SnackbarContent" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify SnackbarContent" />
   </component>
 </project>

@@ -17,6 +17,7 @@ import {
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
 import { sendEmail } from "../actions/email";
+import {clearMessage} from "../actions/message";
 
 const ForgotPassword = () => {
     const [errors, setErrors] = useState({});
@@ -132,7 +133,8 @@ const ForgotPassword = () => {
                                                 key="close"
                                                 aria-label="Close"
                                                 color="inherit"
-                                                onClick={() => {setOpen(false);}}
+                                                onClick={() => {setOpen(false);
+                                                                dispatch(clearMessage());}}
                                             >
                                                 <CloseIcon className={classes.close} />
                                             </IconButton>
