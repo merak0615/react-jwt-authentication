@@ -186,7 +186,7 @@ const Register = () => {
                                 <Grid item xs={12}>
                                     <FormControlLabel
                                         control={<Checkbox value={values.allowExtraEmails} name="allowExtraEmails" color="primary" onChange={onChangeInput}/>}
-                                        label="I want to receive inspiration, marketing promotions and updates via email."
+                                        label="I want to receive inspiration and updates via email."
                                     />
                                 </Grid>
                                 <Button
